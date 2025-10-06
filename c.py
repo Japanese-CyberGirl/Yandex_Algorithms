@@ -16,9 +16,16 @@ for i in s:
 
 n = len(s)
 
-answer = combinations(n , 2)
+# answer = combinations(n , 2)
+
+# for count in counts.values():
+#     answer -= combinations(count, 2)
+
+# print(answer + 1)
+
+answer = n*(n-1)//2
 
 for count in counts.values():
-    answer -= combinations(count, 2)
+    answer -= count*(count-1)//2
 
-print(answer + 1)
+print(answer+1)
